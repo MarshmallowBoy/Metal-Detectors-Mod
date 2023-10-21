@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "Y": {
+      "item": "metal_detectors_mod:metal_detector_2"
+    }
+  },
+  "pattern": [
+    "Y#Y"
+  ],
+  "result": {
+    "item": "metal_detectors_mod:metal_detector_3"
+  }
+}

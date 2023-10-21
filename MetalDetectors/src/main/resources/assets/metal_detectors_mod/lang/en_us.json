@@ -1,0 +1,9 @@
+{
+  "item.metal_detectors_mod.metal_detector_1": "Metal Detector (Coal)",
+  "item.metal_detectors_mod.metal_detector_2": "Metal Detector (Iron)",
+  "item.metal_detectors_mod.metal_detector_3": "Metal Detector (Redstone)",
+  "item.metal_detectors_mod.metal_detector_4": "Metal Detector (Gold)",
+  "item.metal_detectors_mod.metal_detector_5": "Metal Detector (Lapis)",
+  "item.metal_detectors_mod.metal_detector_6": "Metal Detector (Diamond)",
+  "creativetab.detector_tab": "Metal Detectors"
+}
