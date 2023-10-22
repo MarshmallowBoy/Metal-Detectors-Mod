@@ -1,10 +1,10 @@
 # Metal-Detectors-Mod
-Source Code For The Metal Detectors Mod On Modrinth
+# How To Costomize To Fit With Other Mods.
 In order to add your mod's blocks to be able to be scanned by the detectors,
 you may go to the config file "metal_detector_mod-common.toml" and from there
 you can change what block the detectors use, for example, you have a mod called
 "aether" and a block named "zanite_ore", you can change, for example "coal_ore"
-to "aether:zanite_ore". 
+to "aether:zanite_ore". For this method you don't need to change source code.
 
   If you want to create more detectors, you can also create more detectors by going to
   [ModItems.java](MetalDetectors/src/main/java/com/MetalDetectors/ModItems.java)
@@ -82,3 +82,5 @@ to .define("Blocks ID 7", "(the name of the block id you want)")
 And from there, minus the json files you still need to make, (for the model, just take [This json](MetalDetectors/src/main/resources/assets/metal_detectors_mod/models/item/metal_detector_1.json) and then
 copy it, change all the 6's to 7's, and add a custom texture you made by altering the ones already in [The texture folder](MetalDetectors/src/main/resources/assets/metal_detectors_mod/textures/item).
 I would highly recommend using BlockBench to alter the textures.) You are finally done!
+
+If you need any help just contact me at TraysonCazier719@gmail.com
