@@ -1,5 +1,5 @@
 # Metal-Detectors-Mod
-# How To Costomize To Fit With Other Mods.
+# How To Customize To Fit With Other Mods.
 In order to add your mod's blocks to be able to be scanned by the detectors,
 you may go to the config file "metal_detector_mod-common.toml" and from there
 you can change what block the detectors use, for example, you have a mod called
