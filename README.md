@@ -80,7 +80,7 @@ UsesCoords = BUILDER.comment("Uses Coords?").define("Coords:", true);
 Then copy ```Block6 = BUILDER.comment("Blocks For Diamond Detector").define("Blocks ID 6", "diamond_ore");```
 and paste it below it, change the 6 to a 7, then in the BUILDER.comment, instead of "Blocks For Diamond Detector", write
 "Blocks for (You detectors name)" or really whatever you want it to say in the config file, then change ```.define("Blocks ID 6", "diamond_ore")```
-to .define("Blocks ID 7", "(the name of the block id you want)")
+to ```.define("Blocks ID 7", "(the name of the block id you want)")```
 And from there, minus the json files you still need to make, (for the model, just take [This json](MetalDetectors/src/main/resources/assets/metal_detectors_mod/models/item/metal_detector_1.json) and then
 copy it, change all the 6's to 7's, and add a custom texture you made by altering the ones already in [The texture folder](MetalDetectors/src/main/resources/assets/metal_detectors_mod/textures/item).
 I would highly recommend using BlockBench to alter the textures.) You are finally done!
