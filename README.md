@@ -5,7 +5,10 @@ you may go to the config file "metal_detector_mod-common.toml" and from there
 you can change what block the detectors use, for example, you have a mod called
 "aether" and a block named "zanite_ore", you can change, for example "coal_ore"
 to "aether:zanite_ore". For this method you don't need to change source code.
-
+# How to add more than one block a detector can detect
+This one comes with an example, because in the config you will find the ore, and then
+the deepslate variant, you can add more blocks with this format ```"(BlockID), (BlockID)"```
+Example; ```"Blocks ID 1" = "coal_ore, deepslate_coal_ore, coal_block"``` etc.
 
 # How To Make More Detectors For Your Mod.
   If you want to create more detectors, you can also create more detectors by going to
