@@ -27,27 +27,56 @@ public class MetalDetectorItem extends Item{
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
-        switch (ID1){
+        boolean foundBlock = false;
+        switch (ID1) {
             case 1:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block1.get()));
+                String IDs1[] = Config.Block1.get().split(", ");
+                for (int i = 0; i < IDs1.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs1[i])));
+                }
                 break;
             case 2:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block2.get()));
+                String IDs2[] = Config.Block2.get().split(", ");
+                for (int i = 0; i < IDs2.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs2[i])));
+                }
                 break;
             case 3:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block3.get()));
+                String IDs3[] = Config.Block3.get().split(", ");
+                for (int i = 0; i < IDs3.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs3[i])));
+                }
                 break;
             case 4:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block4.get()));
+                String IDs4[] = Config.Block4.get().split(", ");
+                for (int i = 0; i < IDs4.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs4[i])));
+                }
                 break;
             case 5:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block5.get()));
+                String IDs5[] = Config.Block5.get().split(", ");
+                for (int i = 0; i < IDs5.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs5[i])));
+                }
                 break;
             case 6:
-                BlockToDetect1 = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(Config.Block6.get()));
+                String IDs6[] = Config.Block6.get().split(", ");
+                for (int i = 0; i < IDs6.length; i++) {
+                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs6[i])));
+                }
                 break;
         }
 
+        if(!foundBlock && !pContext.getLevel().isClientSide()){
+            pContext.getPlayer().sendSystemMessage(Component.literal("No Valuables Found"));
+        }
+
+        pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), player -> player.broadcastBreakEvent(player.getUsedItemHand()));
+
+        return InteractionResult.SUCCESS;
+    }
+
+    boolean FindTheBlock(UseOnContext pContext, Block BlockToDetect1){
         if(!pContext.getLevel().isClientSide()){
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
@@ -68,15 +97,11 @@ public class MetalDetectorItem extends Item{
 
             }
 
-            if(!foundBlock){
-                player.sendSystemMessage(Component.literal("No Valuables Found"));
-            }
+            return foundBlock;
         }
-
-        pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), player -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-        return InteractionResult.SUCCESS;
+        return false;
     }
+
 
     private void outputValueCoords(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at " +
