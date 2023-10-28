@@ -32,37 +32,61 @@ public class MetalDetectorItem extends Item{
             case 1:
                 String IDs1[] = Config.Block1.get().split(", ");
                 for (int i = 0; i < IDs1.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs1[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs1[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs1[i])));
+                    }
                 }
                 break;
             case 2:
                 String IDs2[] = Config.Block2.get().split(", ");
                 for (int i = 0; i < IDs2.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs2[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs2[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs2[i])));
+                    }
                 }
                 break;
             case 3:
                 String IDs3[] = Config.Block3.get().split(", ");
                 for (int i = 0; i < IDs3.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs3[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs3[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs3[i])));
+                    }
                 }
                 break;
             case 4:
                 String IDs4[] = Config.Block4.get().split(", ");
                 for (int i = 0; i < IDs4.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs4[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs4[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs4[i])));
+                    }
                 }
                 break;
             case 5:
                 String IDs5[] = Config.Block5.get().split(", ");
                 for (int i = 0; i < IDs5.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs5[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs5[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs5[i])));
+                    }
                 }
                 break;
             case 6:
                 String IDs6[] = Config.Block6.get().split(", ");
                 for (int i = 0; i < IDs6.length; i++) {
-                    foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs6[i])));
+                    if(!foundBlock){
+                        foundBlock = FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs6[i])));
+                    }else{
+                        FindTheBlock(pContext, ForgeRegistries.BLOCKS.getValue(new ResourceLocation(IDs6[i])));
+                    }
                 }
                 break;
         }
